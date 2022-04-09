@@ -10,6 +10,7 @@ webdriver_path = 'D:/chromedriver_win32/chromedriver.exe' # Enter the file direc
 amazon_url = 'https://www.amazon.in/'
 search_item = 'OnePlus Nord CE 2 5G' # Chose this because I often search for coffee!
 # Select custom Chrome options
+from selenium.webdriver.common.by import By
 options = webdriver.ChromeOptions()
 options.add_argument('--headless') 
 options.add_argument('start-maximized') 
