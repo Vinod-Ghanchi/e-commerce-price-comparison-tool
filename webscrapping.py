@@ -17,3 +17,5 @@ options.add_argument('--disable-extensions')
 # Open the Chrome browser
 browser = webdriver.Chrome(webdriver_path, options=options)
 browser.get(chroma_url)
+search_bar = browser.find_element_by_id('search')
+search_bar.send_keys(search_item).submit()
