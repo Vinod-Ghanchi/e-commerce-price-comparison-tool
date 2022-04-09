@@ -6,9 +6,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sys 
-webdriver_path = 'D:/chromedriver_win32/chromedriver.exe' # Enter the file directory of the Chromedriver
-amazon_url = 'https://www.amazon.in/'
-search_item = 'OnePlus Nord CE 2 5G' 
+driver = webdriver.Chrome('D:/chromedriver_win32/chromedriver.exe')
+driver.get("https://www.amazon.in/")
+print(driver.title)
+search_bar = driver.find_element_by_id("twotabsearchtextbox")
+search_bar.clear()
+search_bar.send_keys("OnePlus Nord CE 2 5G")
+search_bar.send_keys(Keys.RETURN)
+print(driver.current_url)
 ! pip install webdriver_manager
 # Select custom Chrome options
 from selenium.webdriver.common.by import By
